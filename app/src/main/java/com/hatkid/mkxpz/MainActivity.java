@@ -39,7 +39,9 @@ public class MainActivity extends SDLActivity
     // Put your Java-side stuff here.
 
     private static final String TAG = "mkxp-z[Activity]";
-    private static String GAME_PATH;
+    private static final String GAME_PATH_DEFAULT = Environment.getExternalStorageDirectory() + "/mkxp-z";
+    private static String GAME_PATH = GAME_PATH_DEFAULT;
+    private static String OBB_MAIN_FILENAME;
     private static boolean DEBUG = false;
 
     protected boolean mStarted = false;
