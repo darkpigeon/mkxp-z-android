@@ -85,7 +85,7 @@ public class MainActivity extends SDLActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        GAME_PATH = getApplicationContext().getFilesDir().getPath();
+        GAME_PATH = Environment.getExternalStorageDirectory() + "/mkxp-z";
 
         mMainHandler = new Handler(getMainLooper());
 
