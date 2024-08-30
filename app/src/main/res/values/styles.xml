@@ -5,7 +5,7 @@
     <style name="AppTheme" parent="android:Theme.Material">
         <!-- Custom style items for main theme goes here. -->
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowNoTitle">false</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:colorBackground">@android:color/black</item>
         <item name="android:navigationBarColor">@android:color/black</item>
