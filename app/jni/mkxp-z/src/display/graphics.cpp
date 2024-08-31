@@ -1392,9 +1392,8 @@ int Graphics::height() const { return p->scRes.y; }
 
 void Graphics::resizeScreen(int width, int height) {
     p->threadData->rqWindowAdjust.wait();
-    p->checkResize(true);
     
-    Vec2i size(width, height);
+    Vec2i sizeLores(width, height);
     
     if (p->scRes == size)
         return;
@@ -1412,6 +1411,9 @@ void Graphics::resizeScreen(int width, int height) {
     p->screenQuad.setTexPosRect(screenRect, screenRect);
     
     glState.scissorBox.set(IntRect(0, 0, p->scRes.x, p->scRes.y));
+
+    p->threadData->windowSizeMsg.post(p->winSize);
+    p->checkResize(true);
     
     shState->eThread().requestWindowResize(width, height);
 }
