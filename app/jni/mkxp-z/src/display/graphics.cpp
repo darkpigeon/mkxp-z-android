@@ -1393,7 +1393,7 @@ int Graphics::height() const { return p->scRes.y; }
 void Graphics::resizeScreen(int width, int height) {
     p->threadData->rqWindowAdjust.wait();
     
-    Vec2i sizeLores(width, height);
+    Vec2i size(width, height);
     
     if (p->scRes == size)
         return;
