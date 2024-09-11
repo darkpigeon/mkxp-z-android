@@ -13,7 +13,7 @@ public class GamepadConfig
     public Integer scale = 100;
 
     // Whether use diagonal (8-way) movement on D-Pad (default: false)
-    public Boolean diagonalMovement = false;
+    public Boolean diagonalMovement = true;
 
     /** Key bindings for each RGSS input **/
     public final Integer keycodeA = KeyEvent.KEYCODE_Z;
