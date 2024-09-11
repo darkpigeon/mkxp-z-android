@@ -16,8 +16,8 @@ public class GamepadConfig
     public Boolean diagonalMovement = false;
 
     /** Key bindings for each RGSS input **/
-    public final Integer keycodeA = KeyEvent.KEYCODE_Z;
-    public final Integer keycodeB = KeyEvent.KEYCODE_X;
+    public final Integer keycodeA = KeyEvent.KEYCODE_BUTTON_A;
+    public final Integer keycodeB = KeyEvent.KEYCODE_BUTTON_B;
     public final Integer keycodeC = KeyEvent.KEYCODE_C;
     public final Integer keycodeX = KeyEvent.KEYCODE_A;
     public final Integer keycodeY = KeyEvent.KEYCODE_S;
