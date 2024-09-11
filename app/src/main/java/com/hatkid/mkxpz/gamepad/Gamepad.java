@@ -195,7 +195,20 @@ public class Gamepad
 
             case MotionEvent.ACTION_CANCEL:
             case MotionEvent.ACTION_UP:
-                mOnKeyUpListener.onKeyUp(keycode);
+                if (keycode == KeyEvent.KEYCODE_BUTTON_A)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_Z);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_B)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_X);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_X)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_A);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_Y)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_S);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_L1)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_Q);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_R1)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_W);
+                else
+                    mOnKeyUpListener.onKeyUp(keycode);
                 break;
         }
 
