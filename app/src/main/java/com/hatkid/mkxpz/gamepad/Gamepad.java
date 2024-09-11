@@ -177,7 +177,20 @@ public class Gamepad
         switch (evt.getAction())
         {
             case MotionEvent.ACTION_DOWN:
-                mOnKeyDownListener.onKeyDown(keycode);
+                if (keycode == KeyEvent.KEYCODE_BUTTON_A)
+                  mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_Z);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_B)
+                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_X);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_X)
+                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_A);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_Y)
+                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_S);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_L1)
+                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_Q);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_R1)
+                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_W);
+                else
+                    mOnKeyDownListener.onKeyDown(keycode);
                 break;
 
             case MotionEvent.ACTION_CANCEL:
