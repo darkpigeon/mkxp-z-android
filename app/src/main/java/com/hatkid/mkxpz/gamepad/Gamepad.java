@@ -186,7 +186,7 @@ public class Gamepad
                 else if (keycode == KeyEvent.KEYCODE_BUTTON_Y)
                     mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_S);
                 else if (keycode == KeyEvent.KEYCODE_BUTTON_L1)
-                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_Q);
+                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_SHIFT_LEFT);
                 else if (keycode == KeyEvent.KEYCODE_BUTTON_R1)
                     mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_W);
                 else
@@ -204,7 +204,7 @@ public class Gamepad
                 else if (keycode == KeyEvent.KEYCODE_BUTTON_Y)
                     mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_S);
                 else if (keycode == KeyEvent.KEYCODE_BUTTON_L1)
-                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_Q);
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_SHIFT_LEFT);
                 else if (keycode == KeyEvent.KEYCODE_BUTTON_R1)
                     mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_W);
                 else
