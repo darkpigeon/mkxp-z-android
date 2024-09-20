@@ -177,12 +177,38 @@ public class Gamepad
         switch (evt.getAction())
         {
             case MotionEvent.ACTION_DOWN:
-                mOnKeyDownListener.onKeyDown(keycode);
+                if (keycode == KeyEvent.KEYCODE_BUTTON_A)
+                  mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_Z);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_B)
+                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_X);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_X)
+                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_A);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_Y)
+                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_S);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_L1)
+                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_SHIFT_LEFT);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_R1)
+                    mOnKeyDownListener.onKeyDown(KeyEvent.KEYCODE_W);
+                else
+                    mOnKeyDownListener.onKeyDown(keycode);
                 break;
 
             case MotionEvent.ACTION_CANCEL:
             case MotionEvent.ACTION_UP:
-                mOnKeyUpListener.onKeyUp(keycode);
+                if (keycode == KeyEvent.KEYCODE_BUTTON_A)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_Z);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_B)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_X);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_X)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_A);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_Y)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_S);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_L1)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_SHIFT_LEFT);
+                else if (keycode == KeyEvent.KEYCODE_BUTTON_R1)
+                    mOnKeyUpListener.onKeyUp(KeyEvent.KEYCODE_W);
+                else
+                    mOnKeyUpListener.onKeyUp(keycode);
                 break;
         }
 
